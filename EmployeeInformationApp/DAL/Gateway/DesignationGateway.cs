@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using EmployeeInformationApp.DAL.DAO;
 
-namespace EmployeeInformationApp
+namespace EmployeeInformationApp.DAL.Gateway
 {
     class DesignationGateway
     {
+  
         string Connection()
         {
-            string connection = @"SERVER=BITM-401-PC25\SQLEXPRESS;DATABASE=EmploeeInformation;INTEGRATED SECURITY=true";
+            string connection = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
             return connection;
         }
 

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EmployeeInformationApp.DAL.DAO;
+using EmployeeInformationApp.DAL.Gateway;
 
 namespace EmployeeInformationApp
 {
@@ -11,6 +13,7 @@ namespace EmployeeInformationApp
         public string InsertIntoDatabase(Designation aDesignation)
         {
             DesignationGateway aDesignationGateway=new DesignationGateway();
+
             if (aDesignationGateway.CheckDegignationCodeUniqness(aDesignation.Code) == true)
             {
                 return "Code Already Exist";

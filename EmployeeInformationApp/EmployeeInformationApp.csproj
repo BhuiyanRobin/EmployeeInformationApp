@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,11 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\EmployeeBll.cs" />
-    <Compile Include="Designation.cs" />
+    <Compile Include="DAL\DAO\Designation.cs" />
     <Compile Include="BLL\DesignationBll.cs" />
-    <Compile Include="GateWay\DesignationGateway.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="GateWay\EmployeeGateway.cs" />
+    <Compile Include="DAL\Gateway\DesignationGateway.cs" />
+    <Compile Include="DAL\DAO\Employee.cs" />
+    <Compile Include="DAL\Gateway\EmployeeGateway.cs" />
     <Compile Include="UI\DegignationForm.cs">
       <SubType>Form</SubType>
     </Compile>

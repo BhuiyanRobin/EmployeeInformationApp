@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EmployeeInformationApp.BLL;
-using EmployeeInformationApp.GateWay;
+using EmployeeInformationApp.DAL.DAO;
 
 namespace EmployeeInformationApp.UI
 {

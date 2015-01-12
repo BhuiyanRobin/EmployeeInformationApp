@@ -5,7 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EmployeeInformationApp.GateWay;
+using EmployeeInformationApp.DAL.DAO;
+using EmployeeInformationApp.DAL.Gateway;
 
 namespace EmployeeInformationApp.BLL
 {

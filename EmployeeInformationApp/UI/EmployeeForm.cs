@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EmployeeInformationApp.BLL;
+using EmployeeInformationApp.DAL.DAO;
 
 namespace EmployeeInformationApp
 {
@@ -16,6 +17,7 @@ namespace EmployeeInformationApp
         public EmployeeForm()
         {
             InitializeComponent();
+            degignationComboBox.DisplayMember = "Code";
             DegignationAddToCombobox();
         }
         Employee aEmployee=new Employee();
@@ -42,10 +44,12 @@ namespace EmployeeInformationApp
         {
             List<Designation> designations=new List<Designation>();
             designations=aEmployeeBll.AllDesignations();
-            foreach (Designation designation in designations)
-            {
-                degignationComboBox.Items.Add(designation.Code);
-            }
+            degignationComboBox.DataSource = designations;
+
+            //foreach (Designation designation in designations)
+            //{
+            //    degignationComboBox.Items.Add(designation);
+            //}
         }
        
     }
